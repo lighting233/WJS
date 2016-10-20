@@ -1,0 +1,21 @@
+{
+  "name": "wjs",
+  "authors": [
+    "lighting233 <631649490@qq.com>"
+  ],
+  "description": "微金所响应式网站",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  }
+}
