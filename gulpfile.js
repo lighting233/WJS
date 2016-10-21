@@ -45,6 +45,11 @@ gulp.task('image',function () {
 		.pipe(browserSync.reload({
 			stream: true
 		}));
+	gulp.src('src/font/.*')
+		.pipe(gulp.dest('dist/font'))
+		.pipe(browserSync.reload({
+			stream: true
+		}));
 });
 
 var browserSync = require('browser-sync');
@@ -53,7 +58,10 @@ var browserSync = require('browser-sync');
 gulp.task('serve',function () {
 	browserSync({
 		server: {
-			baseDir: ['dist']
+			baseDir: ['dist'],
+            routes: {
+                "/bower_components": "bower_components"
+            }
 		}
 	}, function(err, bs) {
 		console.log(bs.options.getIn(["urls", "local"]));
