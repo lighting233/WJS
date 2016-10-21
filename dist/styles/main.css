@@ -43,6 +43,7 @@ fieldset[disabled] .btn-itcast.active {
 .navbar-itcast {
   background-color: #fff;
   border-color: #f5f5f5;
+  margin-bottom: 0;
 }
 .navbar-itcast .navbar-brand {
   color: #777;
@@ -168,9 +169,6 @@ body {
 .icon-logo::before {
   content: "\e93e";
 }
-#header {
-  height: 200px;
-}
 #header .mobile-link {
   /*自己加的*/
   display: inline-block;
@@ -222,10 +220,17 @@ body {
   line-height: 50px;
   vertical-align: middle;
 }
-section {
-  height: 200px;
-  background-color: #fff;
+/*通栏广告轮播*/
+#main_ad > .carousel-inner > .item {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
 }
-section:nth-of-type(2n) {
-  background-color: #f5f5f5;
+#main_ad > .carousel-inner > .item > img {
+  width: 100%;
+}
+@media (min-width: 768px) {
+  #main_ad > .carousel-inner > .item {
+    height: 410px;
+  }
 }
