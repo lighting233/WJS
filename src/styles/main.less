@@ -191,13 +191,45 @@ body {
   content: "\e93e";
 }
 
+.icon-uniE900::before {
+  content: "\e900";
+}
+
+.icon-uniE901::before {
+  content: "\e901";
+}
+
+.icon-uniE902::before {
+  content: "\e902";
+}
+
+.icon-uniE903::before {
+  content: "\e903";
+}
+
+.icon-uniE904::before {
+  content: "\e904";
+}
+
+.icon-uniE905::before {
+  content: "\e905";
+}
+
+.icon-uniE906::before {
+  content: "\e906";
+}
+
+.icon-uniE907::before {
+  content: "\e907";
+}
+
 //公共变量
 
 @main-color: #E92322;
 
 @sfont: 12px;
 
-.base-bottom(@w:1px,@c:#c0c0c0){
+.base-bottom(@w:1px,@c:#e0e0e0){
   border-bottom: @w solid @c;
 }
 
@@ -296,6 +328,243 @@ body {
 @media (min-width: 768px) {
   #main_ad > .carousel-inner > .item{
     height: 410px;
+  }
+}
+
+/*特色介绍*/
+
+#features{
+  padding: 40px 0 30px;
+  background-color: #fff;
+  .base-bottom();
+
+  > .container > .row > div{
+
+    > a{
+      color: #333;
+      text-decoration: none;
+      
+      &:hover{
+        color: @main-color;
+      }
+
+      .media-body{
+        padding: 5px 0;
+      }
+    }
+    
+  }
+
+  i{
+    display: block;
+    font-size: 30px;
+    padding: 10px 0;
+  }
+
+  .media{
+    padding: 10px 0;
+  }
+}
+
+/*立即预约*/
+
+#booking{
+  .base-bottom();
+  
+  .container{
+    padding:20px 0 10px;
+    
+    p{
+      font-size: 16px;
+      line-height: 20px;
+
+      span{
+        color: @main-color;
+      }
+
+      i{
+        font-size: 20px;
+      }
+    }
+  }
+  
+  .just-now{
+    border-bottom: 1px dashed @main-color;
+    color: @main-color;
+  }
+  
+  .quick-learn{
+    color: #333;
+  }
+
+  a:hover{
+    text-decoration: none;
+  }
+}
+
+/*产品推荐*/
+
+#products{
+  background-color: #f0f0f0;
+  padding: 40px 0;
+
+
+  .container .nav-tabs{
+    padding-left:20px;
+
+    > li{
+
+      > a{
+        color: #333;
+        font-size: 16px;
+
+        &:hover{
+          border-color: transparent;
+          background-color: transparent;
+          color: #000;
+        }
+
+      }
+    }
+
+    > li.active{
+
+      > a{
+        background-color: transparent;
+        border: none;
+        .base-bottom(4px,@main-color);
+      }
+    }
+  }
+
+  .container .tab-content{
+    padding: 20px 0;
+  }
+
+  .panel-czbk.active{
+    background-color: @main-color;
+    color: #fff;
+
+    &::before{
+      content: "\e915";
+      font-family: itcast;
+      position: absolute;
+      font-size: 40px;
+      top: -8px;
+      left: 15px;
+    }
+
+    .panel-body{
+      strong,sub{
+        color: #fff;
+      }
+    }
+    
+    .panel-heading{
+      strong,sub{
+        color: #fff;
+      }
+    }
+  }
+  .panel-czbk.disabled {
+    background-color: #e0e0e0;
+  }
+
+  .panel-czbk{
+    border: none;
+    border-radius: 0;
+    box-shadow: 1px 1px 5px #ccc;
+
+    .panel-heading{
+      float: right;
+      width: 120px;
+      height: 150px;
+      border-left: 1px dashed #c0c0c0;
+      text-align: center;
+      position: relative;
+      padding-top: 30px;
+
+      &::before{
+        content: ' ';
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        top: -8px;
+        left: -8px;
+        background-color: #f0f0f0;
+      }
+      &::after{
+        content: ' ';
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        bottom: -8px;
+        left: -8px;
+        background-color: #f0f0f0;
+        box-shadow: 0 2px 1px #ccc inset;
+      }
+
+      p{
+        margin-bottom: 0;
+
+        strong{
+          font-size: 36px;
+          color: @main-color;
+        }
+
+        sub{
+          color: @main-color;
+        }
+        span{
+          font-size: 10px;
+        }
+
+      }
+
+      .tooplips span{
+        width: 20px;
+        height: 20px;
+        border-width: 1px;
+        border-style: solid;
+        display: inline-block;
+        padding: 2px;
+        cursor: pointer;
+      }
+      .primary{
+        color: @main-color;
+        border-color: @main-color;
+      }
+
+      .secondary{
+        color: #399;
+        border-color: #399;
+      }
+    }
+
+    .panel-body{
+      margin-right: 120px;
+      height: 150px;
+
+      h5{
+        margin-top: 6px;
+      }
+
+      p{
+        margin: 0;
+        font-size: 10px;
+        color: #c0c0c0;
+        font-weight: bold;
+        padding-bottom: 5px;
+
+        strong,sub{
+          color: #555;
+          font-size: 14px;
+        }
+      }
+
+    }
   }
 }
 

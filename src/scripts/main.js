@@ -20,6 +20,32 @@ $(function () {
             }
 
         });
+
+
+        //初始化tooltip插件
+        $('[data-toggle="tooltip"]').tooltip();
+
+
+        /*控制标签页的标签容器宽度*/
+
+        var $ulContainer = $('.nav-tabs');
+        //获取所有子元素宽度和
+        var width = 30;
+        //遍历子元素
+        $ulContainer.children().each(function (index,element) {
+            width += element.clientWidth;
+        });
+
+        if(width > windowWidth){
+            $ulContainer.css('width',width).parent().css('overflow-x','scroll');
+        }else {
+            $ulContainer.css('width', 'auto');
+            $ulContainer.parent().css('overflow-x', 'hidden');
+        }
     }
+
     $(window).on('resize',resize).trigger('resize');
+
+
+
 });
