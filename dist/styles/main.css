@@ -193,6 +193,26 @@ body {
 .icon-uniE907::before {
   content: "\e907";
 }
+.icon-news01::before {
+  content: "\e90e";
+  font-size: 28px;
+  color: #EAEAEA;
+}
+.icon-news02::before {
+  content: "\e90f";
+  font-size: 28px;
+  color: #EAEAEA;
+}
+.icon-news03::before {
+  content: "\e910";
+  font-size: 28px;
+  color: #EAEAEA;
+}
+.icon-news04::before {
+  content: "\e911";
+  font-size: 28px;
+  color: #EAEAEA;
+}
 #header .mobile-link {
   /*自己加的*/
   display: inline-block;
@@ -440,4 +460,87 @@ body {
 #products .panel-czbk .panel-body p sub {
   color: #555;
   font-size: 14px;
+}
+#products .hkz::after,
+#products .yjq::after,
+#products .ybm::after,
+#products .ywc::after {
+  color: #E92322;
+  position: absolute;
+  font-size: 100px;
+  font-family: itcast;
+  top: 10px;
+  right: 140px;
+}
+#products .hkz::after {
+  content: "\e925";
+}
+#products .yjq::after {
+  content: "\e926";
+}
+#products .ybm::after {
+  content: "\e927";
+}
+#products .ywc::after {
+  content: "\e928";
+}
+/*新闻列表*/
+#news {
+  padding: 50px 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+#news .news-title {
+  font-size: 20px;
+  position: relative;
+  border-bottom: 1px dashed #c0c0c0;
+  text-align: center;
+  padding: 10px;
+}
+#news .news-title::after {
+  content: ' ';
+  display: block;
+  width: 10px;
+  height: 10px;
+  border: 1px solid #c0c0c0;
+  border-radius: 50%;
+  position: absolute;
+  bottom: -5px;
+  right: -10px;
+}
+#news .nav-stacked > li {
+  float: left;
+}
+#news .nav-pills > li > a {
+  background-color: #f5f5f5;
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+  text-align: center;
+  padding: 15px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+#news .nav-pills > li > a:hover,
+#news .nav-pills > li.active > a,
+#news .nav-pills > li.active > a:focus {
+  background-color: #E92322;
+}
+#news .nav-pills > li > a > i {
+  position: absolute;
+  bottom: 10px;
+  right: 16px;
+}
+#news .line {
+  height: 100%;
+  border-left: 1px dashed #c0c0c0;
+  position: absolute;
+  top: 0;
+  left: 55%;
+  z-index: -1;
+}
+#news .tab-pane ul {
+  list-style: none;
+  font-size: 14px;
+  line-height: 3;
+  padding: 0;
 }
