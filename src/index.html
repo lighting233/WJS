@@ -37,12 +37,12 @@
                 </div>
                 <div class="col-md-3 text-center">
                     <a href="#" class="btn btn-itcast btn-sm">免费注册</a>
-                    <a href="#" class="btn btn-link btn-sm">登录</a>
+                    <a href="#" class="btn btn-link btn-sm" data-toggle="modal" data-target="#myModal">登录</a>
                 </div>
             </div>
         </div>
     </div>
-    <nav class="navbar navbar-itcast navbar-static-top" role="navigation">
+    <nav class="navbar navbar-itcast navbar-static-top" role="navigation" data-spy="affix" data-offset-top="60" data-offset-bottom="200">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
@@ -741,12 +741,69 @@
 <!--/新闻列表-->
 
 <!--合作伙伴-->
-<section></section>
+<section id="partner" class="hidden-xs">
+    <div class="container text-center">
+        <h3>合作伙伴</h3>
+        <ul class="partner-list">
+            <li><a href="#"><i class="icon-uniE930"></i></a></li>
+            <li><a href="#"><i class="icon-uniE92F"></i></a></li>
+            <li><a href="#"><i class="icon-uniE92E"></i></a></li>
+            <li><a href="#"><i class="icon-uniE92A"></i></a></li>
+            <li><a href="#"><i class="icon-uniE929"></i></a></li>
+            <li><a href="#"><i class="icon-uniE931"></i></a></li>
+            <li><a href="#"><i class="icon-uniE92C"></i></a></li>
+            <li><a href="#"><i class="icon-uniE92B"></i></a></li>
+            <li><a href="#"><i class="icon-uniE92D"></i></a></li>
+        </ul>
+    </div>
+</section>
 <!--/合作伙伴-->
 
 <!--脚注区域-->
 <footer></footer>
 <!--脚注区域-->
+
+<!-- Modal -->
+<div class="modal fade " id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="myModalLabel">欢迎登陆</h4>
+            </div>
+            <div class="modal-body">
+                <form class="form-horizontal" role="form">
+                    <div class="form-group">
+                        <label for="inputEmail3" class="col-sm-2 control-label">输入邮箱</label>
+                        <div class="col-sm-10">
+                            <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputPassword3" class="col-sm-2 control-label">输入密码</label>
+                        <div class="col-sm-10">
+                            <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10">
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox"> 记住我
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10">
+                            <button type="submit" class="btn btn-default">登录</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
 <script src="../bower_components/jquery/dist/jquery.js"></script>
 <script src="../bower_components/bootstrap/dist/js/bootstrap.js"></script>
 <script src="scripts/main.js"></script>

@@ -47,5 +47,35 @@ $(function () {
     $(window).on('resize',resize).trigger('resize');
 
 
+    var $newsTitle = $('.news-title');
+    $('#news .nav-pills a').on('click',function () {
+        var $this = $(this);
+        var title = $this.data('title');
+        $newsTitle.text(title);
+    });
+
+
+    var $carousels = $('.carousel');
+    var startX,endX;
+    var offset = 50;
+
+    $carousels.on('touchstart',function (e) {
+        startX = e.originalEvent.touches[0].clientX;
+
+    });
+
+    $carousels.on('touchmove',function (e) {
+        endX = e.originalEvent.touches[0].clientX;
+
+    });
+
+    $carousels.on('touchend',function (e) {
+        var distance = Math.abs(startX - endX);
+
+        if (distance > offset){
+            $(this).carousel(startX > endX ? 'next' : 'prev');
+        }
+    });
+
 
 });
